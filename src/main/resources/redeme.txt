@@ -1,0 +1,19 @@
+一、新建maven web 项目
+1、new project——maven——勾选 create from archetype 选中webapp
+2、填写项目的groupId（包名）  artifactId（项目名） version 后出现maven配置界面
+3.配置src/main/java ：（配置完成才能新建class）
+     在 main 上点击右键，新建“ java ”文件夹，让其与“ resources ”同级，在新建的“ java ”文件夹上点击右键，
+     操作“ Make Directory As-->Source Root ”
+二、配置项目运行环境
+1、spring-boot： 在pom.xml文件中新增插件:
+    <build>
+       <plugins>
+            <plugin>
+               <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+2、配置tomcat run——Edit Configurations——Defaults——Tomcat Server--Local配置配置
+   Server: 配置tomcat路径
+   Deployment : 点击“+”配置运行的项目
