@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence persistence_2_0.xsd"
+             version="2.0" xmlns:="http://java.sun.com/xml/ns/persistence">
+    <!--
+         Name属性用于定义持久化单元的名字 (name必选,空值也合法);
+         transaction-type 指定事务类型(可选)
+    -->
+    <persistence-unit name="default" transaction-type="RESOURCE_LOCAL">
+        <!--   厂商专有属性(可选)   -->
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:h2:mea:test" />
+            <property name="javax.persistence.jdbc.user" value="sa" />
+            <property name="javax.persistence.jdbc.password" value="" />
+            <property name="hibernate.hbm2ddl.auto" value="create" />
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.ejb.naming_strategy" value="org.hibernate.cfg.ImprovedNamingStrategy" />
+        </properties>
+    </persistence-unit>
+
+</persistence>

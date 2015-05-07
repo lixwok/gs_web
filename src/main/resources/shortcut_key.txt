@@ -1,0 +1,4 @@
+Ctrl+N   查找类
+Ctrl+Shift+N 查找文件
+Ctrl+Alt+L  格式化代码
+Alt+Insert 生成代码(如get,set方法,构造函数等)
